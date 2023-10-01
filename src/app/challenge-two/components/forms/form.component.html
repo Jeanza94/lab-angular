@@ -1,0 +1,27 @@
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flex-wrap gap-4 justify-center"
+>
+  <label class="flex flex-col gap-1 w-20">
+    <span class="ps-1 capitalize text-primary-base font-medium">S number</span>
+    <input
+      type="number"
+      class="input"
+      formControlName="sNumber"
+      >
+  </label>
+
+  <label class="flex flex-col gap-1">
+    <span class="ps-1 capitalize text-primary-base font-medium" >put your case here</span>
+    <input
+      type="text"
+      class="input"
+      formControlName="test"
+    >
+    <span class="ps-2 text-xs text-primary-dark font-bold">Write numbers separated by commas</span>
+  </label>
+
+  <button class="self-center button" title="Get answer">get answer</button>
+</form>
+

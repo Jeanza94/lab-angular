@@ -1,2 +1,27 @@
 
-<p>main page challenge two</p>
+
+<h1
+  class="text-center text-4xl text-primary-dark font-bold mb-4"
+>
+  Challenge 2
+</h1>
+<hr>
+<p
+  class="text-justify text-common-base font-medium mt-4 mb-2"
+>
+  Write a function that takes in a non-empty array of integers sorted in ascending order and returns a
+  new array of the same length with the squares of the original integers also sorted in ascending
+  order. If the output number is out of the range [0, SS] (for S=6 the range will be [0, 66]), you will
+  delete it of the output array. <strong>Please, don't use built-in sort of your language.</strong>
+</p>
+
+<challenge-two-examples></challenge-two-examples>
+<challenge-two-form></challenge-two-form>
+
+<section
+  *ngIf="isAnswer()"
+  class="shadow-sm shadow-primary-dark w-full sm:w-96 flex flex-wrap gap-4 h-32 sm:h-20  p-4 items-center rounded-lg justify-center mx-auto mt-4"
+>
+  <h3 class="text-3xl text-secondary-base font-bold uppercase">answer:</h3>
+  <p>{{answer() | json}}</p>
+</section>

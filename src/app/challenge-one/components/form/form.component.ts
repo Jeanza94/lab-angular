@@ -32,7 +32,7 @@ export class FormComponent {
     return invertedArr
   }
 
-  removeNumberFromArray = (s: number, arrNumber: number[]) => {
+  removeNumberFromArray(s: number, arrNumber: number[]){
     const removeNumberArr = arrNumber.map(num => {
       const numStr = num.toString()
       if (numStr.length > 1) {
