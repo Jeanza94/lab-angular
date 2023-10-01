@@ -25,3 +25,10 @@
   <button class="self-center button" title="Get answer">get answer</button>
 </form>
 
+<section
+  *ngIf="answerGetter()"
+  class="shadow-sm shadow-primary-dark w-full sm:w-96 flex flex-wrap gap-4 h-32 sm:h-20  p-4 items-center rounded-lg justify-center mx-auto mt-4"
+>
+  <h3 class="text-3xl text-secondary-base font-bold uppercase">answer:</h3>
+  <p>{{answerGetter() | json}}</p>
+</section>

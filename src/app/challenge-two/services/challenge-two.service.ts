@@ -3,11 +3,6 @@ import { Injectable, computed, signal } from "@angular/core";
 @Injectable()
 export class ChallengeTwoService {
 
-  private answer = signal<number[] | null>(null)
-
-  public isAnswer = computed(() => !!this.answer())
-  public answerGetter = computed(() => this.answer())
-
   private mergeSort(numbers: number[]): number[] {
 
     if (numbers.length < 2) return numbers
@@ -57,8 +52,5 @@ export class ChallengeTwoService {
     return this.mergeSort(squareArr)
   }
 
-  setAnswer(numArr: number[] | null) {
-    this.answer.set(numArr)
-  }
 
 }

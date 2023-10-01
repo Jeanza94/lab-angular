@@ -10,8 +10,14 @@ import { ChallengeTwoService } from '../../services/challenge-two.service';
 
 export class FormComponent {
 
+
+
   private challTwoService = inject(ChallengeTwoService)
   private formBuilder = inject(FormBuilder)
+
+  private answer = signal<number[] | null>(null)
+
+  public answerGetter = computed(() => this.answer())
 
   public myForm: FormGroup = this.formBuilder.group({
     test: ['1, 2, 3, 5, 6, 8, 9', [Validators.required, Validators.minLength(1)]],
@@ -33,6 +39,6 @@ export class FormComponent {
 
     const testArr = this.getArrayFromTest(test)
     const getSquareAndSortedArr = this.challTwoService.getSquareAndSortedArr(s, testArr)
-    this.challTwoService.setAnswer(getSquareAndSortedArr)
+    this.answer.set(getSquareAndSortedArr)
   }
 }

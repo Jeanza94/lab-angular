@@ -7,6 +7,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { FormComponent } from './components/form/form.component';
 import { ExamplesComponent } from './components/examples/examples.component';
 import { SharedModule } from '../shared/shared.module';
+import { ChallengeOneService } from './services/challenge-one.service';
 
 
 @NgModule({
@@ -21,5 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     FormComponent,
     ExamplesComponent
   ],
+  providers: [
+    ChallengeOneService
+  ]
 })
 export class ChallengeOneModule { }
