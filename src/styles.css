@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .input {
+    @apply border-2 rounded-lg p-2 w-full focus:outline-none focus:shadow-primary-light;
+  }
+
+  .button {
+    @apply capitalize border-2 bg-primary-dark text-common-light p-2 h-max w-max rounded-lg hover:bg-primary-base transition-colors ease-in duration-300 active:bg-primary-dark;
+  }
+}

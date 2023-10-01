@@ -1,17 +1,22 @@
 
-<header>
+<header class="fixed w-full">
   <nav
     class="flex justify-between p-4 bg-primary-light"
   >
-    <figure>
+    <figure
+      routerLink="/challenge-one"
+    >
       <img src="" alt="">
-      <figcaption>Challenges</figcaption>
+      <figcaption class="text-2xl font-extrabold text-common-base">Challenges</figcaption>
     </figure>
 
     <ul class="flex gap-4">
       <li
-        *ngFor="let link of links"
+      *ngFor="let link of links"
+      title="ir a challenge {{link.text}}"
         [routerLink]="link.route"
+        routerLinkActive="bg-primary-dark text-common-light"
+        class="text-common-base font-medium text-lg capitalize px-2 rounded-lg hover:font-extrabold transition-all ease-in duration-300 cursor-pointer"
       >
         {{link.text}}
       </li>

@@ -1,5 +1,5 @@
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 
 export class FormComponent {
+
+  public answer = signal<number[] | null>(null)
+  public isAnswer = computed(() => !!this.answer())
 
   private formBuilder = inject(FormBuilder)
 
@@ -60,7 +63,7 @@ export class FormComponent {
 
     const testArr = this.getArrayFromTest(test)
     const invertedArr = this.invertArr(testArr)
-    const result = this.removeNumberFromArray(s, invertedArr)
-    console.log(result)
+    const result = this.removeNumberFromArray(s, invertedArr) as number[]
+    this.answer.set(result)
   }
 }

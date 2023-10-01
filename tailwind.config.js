@@ -26,6 +26,9 @@ module.exports = {
           base: "theme(colors.red.600)",
           dark: "theme(colors.red.900)",
         },
+      },
+      boxShadow: {
+        "primary-light": "0 0 4px 2px theme(colors.blue.900)"
       }
     },
   },

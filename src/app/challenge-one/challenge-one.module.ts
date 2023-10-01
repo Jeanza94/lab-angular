@@ -6,13 +6,15 @@ import { ChallengeOneRoutingModule } from './challenge-one-routing.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { FormComponent } from './components/form/form.component';
 import { ExamplesComponent } from './components/examples/examples.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    ChallengeOneRoutingModule
+    ChallengeOneRoutingModule,
+    SharedModule
   ],
   declarations: [
     MainPageComponent,
