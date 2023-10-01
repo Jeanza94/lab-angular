@@ -1,0 +1,20 @@
+
+<header>
+  <nav
+    class="flex justify-between p-4 bg-primary-light"
+  >
+    <figure>
+      <img src="" alt="">
+      <figcaption>Challenges</figcaption>
+    </figure>
+
+    <ul class="flex gap-4">
+      <li
+        *ngFor="let link of links"
+        [routerLink]="link.route"
+      >
+        {{link.text}}
+      </li>
+    </ul>
+  </nav>
+</header>
