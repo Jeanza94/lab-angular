@@ -9,7 +9,13 @@
       type="number"
       class="input"
       formControlName="sNumber"
-      >
+    >
+    <span
+      *ngIf="isError(myForm.controls['sNumber'])"
+      class="ps-2 text-terciary-base text-xs font-medium"
+    >
+      {{getMessageError(myForm.controls['sNumber'].errors)}}
+    </span>
   </label>
 
   <label class="flex flex-col gap-1">
@@ -20,6 +26,12 @@
       formControlName="test"
     >
     <span class="ps-2 text-xs text-primary-dark font-bold">Write numbers separated by commas</span>
+    <span
+      *ngIf="isError(myForm.controls['sNumber'])"
+      class="ps-2 text-terciary-base text-xs font-medium"
+    >
+      {{getMessageError(myForm.controls['test'].errors)}}
+    </span>
   </label>
 
   <button class="self-center button" title="Get answer">get answer</button>
