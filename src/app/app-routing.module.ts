@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./challenge-two/challenge-two.module').then(m => m.ChallengeTwoModule)
   },
   {
+    path: 'challenge-three',
+    loadChildren: () => import('./challenge-three/challenge-three.module').then(m => m.ChallengeThreeModule)
+  },
+  {
     path: '**',
     redirectTo: 'challenge-one'
   }
