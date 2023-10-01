@@ -1,10 +1,23 @@
-<form>
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit()"
+>
+  <label>
+    <span>S number</span>
+    <input
+      type="number"
+      class="border-2 rounded-lg p-2"
+      formControlName="sNumber"
+    >
+  </label>
+
   <label class="flex flex-col gap-1">
     <span class="text-center">put your case here</span>
     <input
       type="text"
       class="border-2 rounded-lg p-2"
-
+      formControlName="test"
+      placeholder="1,2,3,4,5,6"
     >
     <span class="ps-2">write numbers separated by commas</span>
   </label>
