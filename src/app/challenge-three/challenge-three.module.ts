@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ChalengeThreeRoutingModule } from './challenge-three-routing.module';
+import { ExamplesComponent } from './components/examples/examples.component';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ChalengeThreeRoutingModule } from './challenge-three-routing.module';
     ChalengeThreeRoutingModule
   ],
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    ExamplesComponent
   ],
 })
 export class ChallengeThreeModule { }

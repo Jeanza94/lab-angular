@@ -1,1 +1,51 @@
-<p>main page challenge three</p>
+<h1 class="text-center text-4xl text-primary-dark font-bold mb-4">
+  Challenge 3
+</h1>
+<hr>
+
+<p class="text-justify text-common-base font-medium mt-4 mb-2">
+  Given an array of positive integers representing the values of coins in your possession, write a
+  function that returns the minimum amount of change (the minimum sum of money) that you
+  CANNOT give change. The given coins can have any positive integer value and aren't necessarily
+  unique (i.e., you can have multiple coins of the same value). You can use built-in sort of your
+  language.
+</p>
+
+<ul class="flex flex-col gap-2">
+  <li>
+    <h3 class="text-primary-base capitalize font-semibold">hint 1</h3>
+    <p class="text-justify text-common-base font-medium">
+      One approach to solve this problem is to attempt to create every single amount of change, starting
+      at 1 and going up until you eventually can't create an amount. While this approach works, there is
+      a better one.
+    </p>
+  </li>
+
+  <li>
+    <h3 class="text-primary-base capitalize font-semibold">hint 2</h3>
+    <p class="text-justify text-common-base font-medium">
+      Start by sorting the input array. Since you're trying to find the minimum amount of change that you
+      can't create, it makes sense to consider the smallest coins first.
+      Hint 3
+    </p>
+  </li>
+
+  <li>
+    <h3 class="text-primary-base capitalize font-semibold">hint 3</h3>
+    <p class="text-justify text-common-base font-medium">
+      To understand the trick to this problem, consider the following example: coins = [1, 2, 4]. With this
+      set of coins, we can create 1, 2, 3, 4, 5, 6, 7 cents worth of change. Now, if we were to add a coin of
+      Full-stack Developer Challenge
+      value 9 to this set, we would not be able to create 8 cents. However, if we were to add a coin of
+      value 7, we would be able to create 8 cents, and we would also be able to create all values of
+      change from 1 to 15. Why is this the case?
+    </p>
+
+  </li>
+
+</ul>
+
+
+
+<challenge-three-examples></challenge-three-examples>
+<!-- <challenge-one-form></challenge-one-form> -->
