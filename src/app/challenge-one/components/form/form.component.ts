@@ -19,21 +19,13 @@ export class FormComponent {
   public answerGetter = computed(() => this.answer())
 
   public myForm: FormGroup = this.formBuilder.group({
-    test: ['1,2,3,4,5,6', [Validators.required, Validators.minLength(1), this.validationTest]],
+    test: [
+      '1,2,3,4,5,6',
+      [Validators.required, this.validationsService.validationTestNumber, this.validationsService.validationTestPositive]
+    ],
     sNumber: ['6', [Validators.required, this.validationsService.validationS]],
   })
 
-  validationTest(control: AbstractControl) {
-    const value:string = control.value
-
-    const isNotNumber= value.trim().split(',').some(elem => isNaN(+elem))
-    if (isNotNumber) return {notNumber: true}
-
-    const isNotPositive= value.trim().split(',').some(elem => +elem < 0)
-    if (isNotPositive) return {notPositive: true}
-
-    return null
-  }
 
   isError(control: AbstractControl) {
     return this.validationsService.isError(control)

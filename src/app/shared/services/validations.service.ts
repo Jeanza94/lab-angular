@@ -12,6 +12,22 @@ export class ValidationsService {
     return null
   }
 
+  validationTestNumber(control: AbstractControl) {
+    const value:string = control.value
+    const isNotNumber= value.trim().split(',').some(elem => isNaN(+elem))
+    if (isNotNumber) return {notNumber: true}
+    return null
+  }
+
+  validationTestPositive(control: AbstractControl) {
+    const value:string = control.value
+
+    const isNotPositive= value.trim().split(',').some(elem => +elem < 0)
+    if (isNotPositive) return {notPositive: true}
+
+    return null
+  }
+
   isError(control: AbstractControl) {
     return control.errors && control.touched
   }

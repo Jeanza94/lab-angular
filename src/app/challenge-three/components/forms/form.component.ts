@@ -1,37 +1,37 @@
 
 import { Component, inject, signal, computed } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { ChallengeTwoService } from '../../services/challenge-two.service';
 import { ValidationsService } from 'src/app/shared/services/validations.service';
+import { ChallengeThreeService } from '../../services/challenge-three.service';
 
 @Component({
-  selector: 'challenge-two-form',
+  selector: 'challenge-three-form',
   templateUrl: 'form.component.html'
 })
 
 export class FormComponent {
 
-
-  private challTwoService = inject(ChallengeTwoService)
+  private challThreeService = inject(ChallengeThreeService)
   private formBuilder = inject(FormBuilder)
-  private validationService = inject(ValidationsService)
+  private validationsService = inject(ValidationsService)
 
-  private answer = signal<number[] | null>(null)
-
+  private answer = signal<number | null>(null)
   public answerGetter = computed(() => this.answer())
 
   public myForm: FormGroup = this.formBuilder.group({
-    test: ['1, 2, 3, 5, 6, 8, 9', [Validators.required, this.validationService.validationTestNumber]],
-    sNumber: ['6', [Validators.required, this.validationService.validationS]],
+    test: [
+      '5, 7, 1, 1, 2, 3, 22',
+      [Validators.required, this.validationsService.validationTestNumber, this.validationsService.validationTestPositive]
+    ],
   })
 
   isError(control: AbstractControl) {
-    return this.validationService.isError(control)
+    return this.validationsService.isError(control)
   }
 
   getMessageError(error: {[key: string]: any} | null) {
     if (!error) return null
-    return this.validationService.getMessageError(error)
+    return this.validationsService.getMessageError(error)
   }
 
   getArrayFromTest(value: string): number[] {
@@ -46,10 +46,9 @@ export class FormComponent {
       return
     }
     const test: string = this.myForm.get('test')!.value
-    const s: number = +this.myForm.get('sNumber')!.value
 
     const testArr = this.getArrayFromTest(test)
-    const getSquareAndSortedArr = this.challTwoService.getSquareAndSortedArr(s, testArr)
-    this.answer.set(getSquareAndSortedArr)
+    const change = this.challThreeService.GetMinimumChange(testArr)
+    this.answer.set(change)
   }
 }

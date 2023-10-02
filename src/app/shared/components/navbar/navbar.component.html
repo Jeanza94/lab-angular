@@ -1,22 +1,24 @@
 
 <header class="fixed w-full">
   <nav
-    class="flex justify-between p-4 bg-primary-light"
+    class="flex flex-wrap justify-center md:justify-between items-center gap-4 p-4 bg-primary-light"
   >
     <figure
       routerLink="/challenge-one"
+      class="flex gap-2 items-center cursor-pointer hover:scale-110 transition-all ease-in duration-300"
+      title="go to challenge one / home"
     >
-      <img src="" alt="">
+      <img src="https://cdn-icons-png.flaticon.com/128/10320/10320359.png" class="h-6 w-6" alt="challenges icon">
       <figcaption class="text-2xl font-extrabold text-common-base">Challenges</figcaption>
     </figure>
 
     <ul class="flex gap-4">
       <li
       *ngFor="let link of links"
-      title="ir a challenge {{link.text}}"
+      title="go to challenge {{link.text}}"
         [routerLink]="link.route"
         routerLinkActive="bg-primary-dark text-common-light"
-        class="text-common-base font-medium text-lg capitalize px-2 rounded-lg hover:font-extrabold transition-all ease-in duration-300 cursor-pointer"
+        class="text-common-base font-medium text-lg capitalize px-2 rounded-lg hover:scale-110 transition-all ease-in duration-300 cursor-pointer"
       >
         {{link.text}}
       </li>
