@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from '../src/app/app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -8,16 +8,16 @@ describe('AppComponent', () => {
     declarations: [AppComponent]
   }));
 
-  it('should create the app', () => {
+  test('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    const component = fixture.componentInstance;
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'lab-angular'`, () => {
+  test(`should have as title 'lab-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('lab-angular');
+    const component = fixture.componentInstance;
+    expect(component.title).toEqual('lab-angular');
   });
 
 });

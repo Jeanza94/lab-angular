@@ -23,7 +23,7 @@ export class FormComponent {
       '1,2,3,4,5,6',
       [Validators.required, this.validationsService.validationTestNumber, this.validationsService.validationTestPositive]
     ],
-    sNumber: ['6', [Validators.required, this.validationsService.validationS]],
+    sNumber: ['7', [Validators.required, this.validationsService.validationS]],
   })
 
 

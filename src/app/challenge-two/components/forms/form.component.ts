@@ -22,7 +22,7 @@ export class FormComponent {
 
   public myForm: FormGroup = this.formBuilder.group({
     test: ['1, 2, 3, 5, 6, 8, 9', [Validators.required, this.validationService.validationTestNumber]],
-    sNumber: ['6', [Validators.required, this.validationService.validationS]],
+    sNumber: ['7', [Validators.required, this.validationService.validationS]],
   })
 
   isError(control: AbstractControl) {
