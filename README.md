@@ -1,27 +1,25 @@
-# LabAngular
+<p align="center">
+  <a href="https://lab-angular.netlify.app" target="blank"><img src="https://cdn-icons-png.flaticon.com/128/11670/11670356.png" width="200" alt="lab-angular logo" /></a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+# Lab-Angular Challenges
 
-## Development server
+## Desarrollo
+1. Clonar proyecto
+2. Instalar las dependencias del proyecto
+```
+npm install
+```
+3. Correr el proyecto en modo desarrollo
+```
+npm run start | ng serve
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Producción
 
-## Code scaffolding
+La aplicación esta en el hosting de netlify.
+1. Ir a: https://lab-angular.netlify.app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
