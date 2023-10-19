@@ -3,7 +3,7 @@ import { Injectable, computed, signal } from "@angular/core";
 @Injectable()
 export class ChallengeOneService{
 
-  private invertArr(arrNumber: number[]) {
+  invertArr(arrNumber: number[]) {
     const invertedArr: number[] = []
     for (let i = arrNumber.length - 1; i >= 0; i--) {
       invertedArr.push(arrNumber[i])
@@ -11,7 +11,7 @@ export class ChallengeOneService{
     return invertedArr
   }
 
-  private removeNumberFromArray(s: number, arrNumber: number[]){
+  removeNumberFromArray(s: number, arrNumber: number[]){
     const removeNumberArr = arrNumber.map(num => {
       const numStr = num.toString()
       if (numStr.length > 1) {

@@ -2,7 +2,7 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { ChallengeOneService } from '../../services/challenge-one.service';
-import { ValidationsService } from 'src/app/shared/services/validations.service';
+import { ValidationsService } from '../../../shared/services/validations.service';
 
 @Component({
   selector: 'challenge-one-form',

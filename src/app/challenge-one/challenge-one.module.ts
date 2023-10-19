@@ -24,6 +24,6 @@ import { ChallengeOneService } from './services/challenge-one.service';
   ],
   providers: [
     ChallengeOneService
-  ]
+  ],
 })
 export class ChallengeOneModule { }
