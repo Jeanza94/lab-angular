@@ -3,7 +3,7 @@ import { Injectable, computed, signal } from "@angular/core";
 @Injectable()
 export class ChallengeTwoService {
 
-  private mergeSort(numbers: number[]): number[] {
+  mergeSort(numbers: number[]): number[] {
 
     if (numbers.length < 2) return numbers
 
@@ -15,7 +15,7 @@ export class ChallengeTwoService {
 
   }
 
-  private merge(leftSide: number[], rightSide: number[]) {
+  merge(leftSide: number[], rightSide: number[]) {
 
     const sortedArr: number[] = []
     let leftSideIndex = 0
